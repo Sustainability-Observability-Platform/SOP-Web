@@ -1,7 +1,7 @@
 import ECommerce from "@/components/Dashboard/E-commerce";
 import { Metadata } from "next";
 import LandingPageLayout from "@/components/Layouts/LandingPageLayout";
-
+import Typewriter from "@/components/Texts/typingEffects"
 export const metadata: Metadata = {
   title:
     "node.0",
@@ -18,6 +18,13 @@ export default function Home() {
         </div>
         <img className="mt-8 hidden w-full max-w-lg md:mt-0 md:block" src={"/images/image1.svg"}></img>
       </main>
+      <section className="border-t py-4 text-center md:py-8">
+        <div className="font-title text-xl">
+          <h1 className="h-[calc(2rem*2)] px-8 md:h-auto">ESG discolure unified data lake for large</h1>
+          <Typewriter/>
+        </div>
+      </section>
+
     </LandingPageLayout>
   );
 }
