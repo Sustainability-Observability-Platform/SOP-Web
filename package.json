@@ -27,6 +27,7 @@
     "react": "^18",
     "react-apexcharts": "^1.7.0",
     "react-dom": "^18",
+    "react-typed": "^2.0.12",
     "sigma": "^3.0.0-beta.39"
   },
   "devDependencies": {
