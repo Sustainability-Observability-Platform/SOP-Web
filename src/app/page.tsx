@@ -16,15 +16,11 @@ export default function Home() {
           <h1 className="font-title text-4xl md:text-5xl">Measure 10<strong>⤫</strong> the carbon emission in 1/10<sup>th</sup> the time</h1>
           <p className="font-title text-xl text-muted-foreground">Node.0 delivers real-time insights with our ESG Carbon Emission Platform. Track, reduce, and optimize your carbon footprint to stay ahead of regulations and drive sustainable impact.</p>
         </div>
-        <img className="mt-8 hidden w-full max-w-lg md:mt-0 md:block" src={"/images/image1.svg"}></img>
+        <img className="mt-8 w-full max-w-lg md:mt-0 md:block hidden" src={"/images/image1.svg"}></img>
       </main>
       <section className="border-t py-4 text-center md:py-8">
-        <div className="font-title text-xl">
-          <h1 className="h-[calc(2rem*2)] px-8 md:h-auto">ESG discolure unified data lake for large</h1>
-          <Typewriter/>
-        </div>
+        <span><Typewriter /></span>
       </section>
-
     </LandingPageLayout>
   );
 }
