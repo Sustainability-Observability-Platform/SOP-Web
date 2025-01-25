@@ -22,5 +22,6 @@ export default function Home() {
         <span><Typewriter /></span>
       </section>
     </LandingPageLayout>
+    
   );
 }

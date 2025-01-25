@@ -18,7 +18,7 @@ const signInButton = () => {
   // TODO: add a path for sign in
   return (<Link
     href="#"
-    className="hover:bg-primary hover:bg-opacity-10 inline-flex items-center justify-center rounded-md border border-primary px-6 py-2 text-center font-medium text-primary hover:bg-opacity-90 lg:px-8 xl:px-10"
+    className="hover:bg-primary hover:bg-opacity-20 inline-flex items-center justify-center rounded-md border border-primary px-6 py-2 text-center font-medium text-primary hover:bg-opacity-90 lg:px-8 xl:px-10"
   >
     Sign In
   </Link>)
@@ -29,8 +29,8 @@ const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
-  return (
-    <header className="sticky top-0 z-999 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
+  return (  
+    <header className="flex flex-row items-center sticky top-0 z-999 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
       <div className="flex flex-grow items-center justify-between px-4 py-4 shadow-2 md:px-6 2xl:px-11">
         <div className="flex items-center gap-2 sm:gap-4 ">
           <h1 className="text-xl font-bold color:black">Node.0</h1>
@@ -112,7 +112,7 @@ const Header = (props: {
         <div className="flex items-center gap-3 2xsm:gap-7">
           <ul className="flex items-center gap-2 2xsm:gap-4">
             {/* <!-- Dark Mode Toggler --> */}
-            <DarkModeSwitcher />
+            {/* <DarkModeSwitcher /> */}
             {/* <!-- Dark Mode Toggler --> */}
 
             {/* <!-- Notification Menu Area --> */}
