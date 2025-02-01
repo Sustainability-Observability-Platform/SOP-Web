@@ -4,26 +4,26 @@ import DropdownMessage from "./DropdownMessage";
 import DropdownNotification from "./DropdownNotification";
 import DropdownUser from "./DropdownUser";
 import Image from "next/image";
+import LoginButton from "../Login/LoginButton";
+// const requireAuth = () => {
+//   if (!localStorage.getItem('token')) {
+//     // go to login route
+//     return false
+//   }
+//   return true
+//   // stay on this route since the user is authenticated
+// }
 
-const requireAuth = () => {
-  if (!localStorage.getItem('token')) {
-    // go to login route
-    return false
-  }
-  return true
-  // stay on this route since the user is authenticated
-}
+// const signInButton = () => {
+//   // TODO: add a path for sign in
+//   return (<Link
+//     href="#"
+//     className="hover:bg-primary hover:bg-opacity-20 inline-flex items-center justify-center rounded-md border border-primary px-6 py-2 text-center font-medium text-primary hover:bg-opacity-90 lg:px-8 xl:px-10"
+//   >
+//     Sign In
+//   </Link>)
 
-const signInButton = () => {
-  // TODO: add a path for sign in
-  return (<Link
-    href="#"
-    className="hover:bg-primary hover:bg-opacity-20 inline-flex items-center justify-center rounded-md border border-primary px-6 py-2 text-center font-medium text-primary hover:bg-opacity-90 lg:px-8 xl:px-10"
-  >
-    Sign In
-  </Link>)
-
-}
+// }
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
@@ -116,7 +116,7 @@ const Header = (props: {
             {/* <!-- Dark Mode Toggler --> */}
 
             {/* <!-- Notification Menu Area --> */}
-            {/* <DropdownNotification /> */}
+            <DropdownNotification />
             {/* <!-- Notification Menu Area --> */}
 
             {/* <!-- Chat Notification Area --> */}
@@ -125,7 +125,8 @@ const Header = (props: {
           </ul>
 
           {/* <!-- User Area --> */}
-          {requireAuth() ? <DropdownUser /> : signInButton()}
+          {/* {requireAuth() ? <DropdownUser /> : LoginButton()} */}
+          <LoginButton />
           {/* <!-- User Area --> */}
         </div>
       </div>

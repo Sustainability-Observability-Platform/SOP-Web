@@ -2,6 +2,7 @@ import ECommerce from "@/components/Dashboard/E-commerce";
 import { Metadata } from "next";
 import LandingPageLayout from "@/components/Layouts/LandingPageLayout";
 import Typewriter from "@/components/Texts/typingEffects"
+
 export const metadata: Metadata = {
   title:
     "node.0",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+
   return (
     <LandingPageLayout>
       <main className="flex flex-1 flex-col items-center justify-center p-6 text-center md:flex-row md:space-x-8 md:text-left">
@@ -22,6 +24,5 @@ export default function Home() {
         <span><Typewriter /></span>
       </section>
     </LandingPageLayout>
-    
   );
 }

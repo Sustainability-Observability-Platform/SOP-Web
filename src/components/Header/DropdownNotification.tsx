@@ -5,7 +5,6 @@ import ClickOutside from "@/components/ClickOutside";
 const DropdownNotification = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [notifying, setNotifying] = useState(true);
-
   return (
     <ClickOutside onClick={() => setDropdownOpen(false)} className="relative">
       <li>

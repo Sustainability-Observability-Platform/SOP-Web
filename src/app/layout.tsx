@@ -5,27 +5,34 @@ import "@/css/satoshi.css";
 import "@/css/style.css";
 import React, { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
+import SessionProviderClientComponent from "./auth/SessionProviderClientComponent";
+import { getServerSession } from "next-auth"
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState<boolean>(true);
+  const session = await getServerSession();
 
   // const pathname = usePathname();
 
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
-  }, []);
+
 
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <div className="dark:bg-boxdark-2 dark:text-bodydark">
+        {/* <div className="dark:bg-boxdark-2 dark:text-bodydark">
           {loading ? <Loader /> : children}
-        </div>
+        </div> */}
+
+        <SessionProviderClientComponent session={session}>
+          <div className="dark:bg-boxdark-2 dark:text-bodydark">
+            {children}
+          </div>
+        </SessionProviderClientComponent>
       </body>
     </html>
   );
